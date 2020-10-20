@@ -1,3 +1,25 @@
 body{
     background: url("../img/color-degradado-fondos-degradados-multicolor-51200.jpg") no-repeat center center fixed;
 }
+
+
+.container{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.header{
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+h1{
+    text-align: center;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+h3{
+    padding-top: 20px;
+}
+
