@@ -5,15 +5,18 @@ $( document ).ready(function(){
             var cosas_a_comprar = $("#valor").val();    
             var nuevoItem = $("<li>"+cosas_a_comprar+"</li>");
             $("#list").append(nuevoItem);
-            $(nuevoItem).append("$('<img>',{id:'theImg',src:'..img/cruz.png'})")
+            var image = new Image();
+            var src = "img/cruz.png";
+            image.src = src;
+            $(nuevoItem).append(image);
             $("#valor").val("");
         }
     }
 
     function eliminarItem(){
-        $(this).remove();
+        $(nuevoItem).remove();
     }
 
     $("#butn").click(crearItem);
-    $(".fas .fa-times").click(eliminarItem);
+    $(image).click(eliminarItem);
 })
