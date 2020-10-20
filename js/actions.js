@@ -5,18 +5,18 @@ $( document ).ready(function(){
             var cosas_a_comprar = $("#valor").val();    
             var nuevoItem = $("<li>"+cosas_a_comprar+"</li>");
             $("#list").append(nuevoItem);
-            var image = new Image();
-            var src = "img/cruz.png";
-            image.src = src;
-            $(nuevoItem).append(image);
+            var close_button='<button class="btn btn-eliminar"><i class="fa fa-times"></i></button>'
+            
+            $(nuevoItem).append(close_button);
             $("#valor").val("");
         }
     }
 
     function eliminarItem(){
-        $(nuevoItem).remove();
+        console.log("borrar cosa")
+        $(this).remove();
     }
 
     $("#butn").click(crearItem);
-    $(image).click(eliminarItem);
+    $('.btn-eliminar').click(eliminarItem);
 })
