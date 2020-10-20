@@ -5,9 +5,9 @@ $( document ).ready(function(){
             var cosas_a_comprar = $("#valor").val();    
             var nuevoItem = $("<li>"+cosas_a_comprar+"</li>");
             $("#list").append(nuevoItem);
-            var close_button='<button class="btn btn-eliminar"><i class="fa fa-times"></i></button>'
-            
+            var close_button=$('<button class="btn btn-eliminar"><i class="fa fa-times"></i></button>')
             $(nuevoItem).append(close_button);
+            close_button.click(eliminarItem);
             $("#valor").val("");
         }
     }
@@ -18,5 +18,5 @@ $( document ).ready(function(){
     }
 
     $("#butn").click(crearItem);
-    $('.btn-eliminar').click(eliminarItem);
+    
 })
